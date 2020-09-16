@@ -1,0 +1,890 @@
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder
+$ git config --global user.name "Vaishnavi"
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder
+$ git config --global user.email "vaishnavinayak1@gmail.com"
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder
+$ git config --list
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+http.sslbackend=openssl
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+credential.helper=manager
+core.editor="C:\\Program Files (x86)\\Notepad++\\notepad++.exe" -multiInst -notabbar -nosession -noPlugin
+core.autocrlf=input
+core.symlinks=false
+pull.rebase=false
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=Vaishnavi
+user.email=vaishnavinayak1@gmail.com
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder
+$ ^C
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder
+$ git init
+Initialized empty Git repository in C:/PERSISTENT/Git_Working_Folder/.git/
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        File1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git add File1.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   File1.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git commit -m "WID: File1 created with Hello world Logic"
+[master (root-commit) e91d3be] WID: File1 created with Hello world Logic
+ 1 file changed, 1 insertion(+)
+ create mode 100644 File1.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git commit -am "WID:modified File1 on login status"
+warning: CRLF will be replaced by LF in File1.txt.
+The file will have its original line endings in your working directory
+[master 1b5ff75] WID:modified File1 on login status
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log
+commit 1b5ff7536e3d061268d41808cdaf36988420ae96 (HEAD -> master)
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:52:36 2020 +0530
+
+    WID:modified File1 on login status
+
+commit e91d3be04e5d6349e1c68e3092277063a4a2c89a
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:47:45 2020 +0530
+
+    WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git add .
+warning: CRLF will be replaced by LF in File1.txt.
+The file will have its original line endings in your working directory
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git commit
+[master e832341] WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log
+commit e832341fbb6d8559260664f72ba632c250b09de2 (HEAD -> master)
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 15:00:33 2020 +0530
+
+    WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+
+commit 1b5ff7536e3d061268d41808cdaf36988420ae96
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:52:36 2020 +0530
+
+    WID:modified File1 on login status
+
+commit e91d3be04e5d6349e1c68e3092277063a4a2c89a
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:47:45 2020 +0530
+
+    WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --oneline
+e832341 (HEAD -> master) WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+e91d3be WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log -2 --oneline
+e832341 (HEAD -> master) WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log -2
+commit e832341fbb6d8559260664f72ba632c250b09de2 (HEAD -> master)
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 15:00:33 2020 +0530
+
+    WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+
+commit 1b5ff7536e3d061268d41808cdaf36988420ae96
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:52:36 2020 +0530
+
+    WID:modified File1 on login status
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log -author="Vaishnavi"
+fatal: unrecognized argument: -author=Vaishnavi
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --author="Vaishnavi"
+commit e832341fbb6d8559260664f72ba632c250b09de2 (HEAD -> master)
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 15:00:33 2020 +0530
+
+    WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+
+commit 1b5ff7536e3d061268d41808cdaf36988420ae96
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:52:36 2020 +0530
+
+    WID:modified File1 on login status
+
+commit e91d3be04e5d6349e1c68e3092277063a4a2c89a
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:47:45 2020 +0530
+
+    WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --since='09/15/2020'
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --since='09/14/2020'
+commit e832341fbb6d8559260664f72ba632c250b09de2 (HEAD -> master)
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 15:00:33 2020 +0530
+
+    WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+
+commit 1b5ff7536e3d061268d41808cdaf36988420ae96
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:52:36 2020 +0530
+
+    WID:modified File1 on login status
+
+commit e91d3be04e5d6349e1c68e3092277063a4a2c89a
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:47:45 2020 +0530
+
+    WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --until='09/14/2020'
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --until='09/15/2020'
+commit e832341fbb6d8559260664f72ba632c250b09de2 (HEAD -> master)
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 15:00:33 2020 +0530
+
+    WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+
+commit 1b5ff7536e3d061268d41808cdaf36988420ae96
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:52:36 2020 +0530
+
+    WID:modified File1 on login status
+
+commit e91d3be04e5d6349e1c68e3092277063a4a2c89a
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:47:45 2020 +0530
+
+    WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --help
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --grep="WID"
+commit e832341fbb6d8559260664f72ba632c250b09de2 (HEAD -> master)
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 15:00:33 2020 +0530
+
+    WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+
+commit 1b5ff7536e3d061268d41808cdaf36988420ae96
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:52:36 2020 +0530
+
+    WID:modified File1 on login status
+
+commit e91d3be04e5d6349e1c68e3092277063a4a2c89a
+Author: Vaishnavi <vaishnavinayak1@gmail.com>
+Date:   Tue Sep 15 14:47:45 2020 +0530
+
+    WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git diff
+warning: CRLF will be replaced by LF in File1.txt.
+The file will have its original line endings in your working directory
+diff --git a/File1.txt b/File1.txt
+index d96dcf4..8ad9ed2 100644
+--- a/File1.txt
++++ b/File1.txt
+@@ -1,3 +1,3 @@
+-1)Hello World!
+-2)How are you?
+-3)byeeeeee
+\ No newline at end of file
++1)Hello World!ooooo
++2)How are you?ooooo
++3)byeeeeeeoooo
+\ No newline at end of file
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git checkout --File1.txt
+error: unknown option `File1.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore --File1.txt
+error: unknown option `File1.txt'
+usage: git restore [<options>] [--source=<branch>] <file>...
+
+    -s, --source <tree-ish>
+                          which tree-ish to checkout from
+    -S, --staged          restore the index
+    -W, --worktree        restore the working tree (default)
+    --ignore-unmerged     ignore unmerged entries
+    --overlay             use overlay mode
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore --File1.txt
+error: unknown option `File1.txt'
+usage: git restore [<options>] [--source=<branch>] <file>...
+
+    -s, --source <tree-ish>
+                          which tree-ish to checkout from
+    -S, --staged          restore the index
+    -W, --worktree        restore the working tree (default)
+    --ignore-unmerged     ignore unmerged entries
+    --overlay             use overlay mode
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git add .
+warning: CRLF will be replaced by LF in File1.txt.
+The file will have its original line endings in your working directory
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore --File1.txt
+error: unknown option `File1.txt'
+usage: git restore [<options>] [--source=<branch>] <file>...
+
+    -s, --source <tree-ish>
+                          which tree-ish to checkout from
+    -S, --staged          restore the index
+    -W, --worktree        restore the working tree (default)
+    --ignore-unmerged     ignore unmerged entries
+    --overlay             use overlay mode
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git checkout --File1.txt
+error: unknown option `File1.txt'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore --staged <File1>
+bash: syntax error near unexpected token `newline'
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git checkout --File1
+error: unknown option `File1'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --guess               second guess 'git checkout <no-such-branch>' (default)
+    --overlay             use overlay mode (default)
+    -q, --quiet           suppress progress reporting
+    --recurse-submodules[=<checkout>]
+                          control recursive updating of submodules
+    --progress            force progress reporting
+    -m, --merge           perform a 3-way merge with the new branch
+    --conflict <style>    conflict style (merge or diff3)
+    -d, --detach          detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    -f, --force           force checkout (throw away local modifications)
+    --orphan <new-branch>
+                          new unparented branch
+    --overwrite-ignore    update ignored files (default)
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --pathspec-from-file <file>
+                          read pathspec from file
+    --pathspec-file-nul   with --pathspec-from-file, pathspec elements are separated with NUL character
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore File1
+error: pathspec 'File1' did not match any file(s) known to git
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore File1.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class.rtf
+        .jar.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class.rtf
+        .gitignore.txt
+        .jar.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class.rtf
+        .gitignore.txt
+        .jar.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ ^C
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class.rtf
+        .gitignore.txt
+        .jar.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .class.rtf
+        .gitignore.txt
+        .jar.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore.txt
+        hey.rtf
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        File2.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git add .
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git commit -m "Cong: implemented the .gitignore on the .rtf files"
+[master b3d25b4] Cong: implemented the .gitignore on the .rtf files
+ 3 files changed, 5 insertions(+), 3 deletions(-)
+ create mode 100644 .gitignore
+ create mode 100644 File2.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --oneline
+b3d25b4 (HEAD -> master) Cong: implemented the .gitignore on the .rtf files
+e832341 WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+e91d3be WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git commit -am "WID2:trying restore or check"
+warning: CRLF will be replaced by LF in File1.txt.
+The file will have its original line endings in your working directory
+[master e92ff83] WID2:trying restore or check
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore File
+File1.txt  File2.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore File1.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git tag
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git tag V1.0
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git tag
+V1.0
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --oneline
+e92ff83 (HEAD -> master, tag: V1.0) WID2:trying restore or check
+b3d25b4 Cong: implemented the .gitignore on the .rtf files
+e832341 WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+e91d3be WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git add .
+warning: CRLF will be replaced by LF in File1.txt.
+The file will have its original line endings in your working directory
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git restore File1.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git checkout File1.txt
+Updated 0 paths from the index
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   File1.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   File1.txt
+
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git add .
+warning: CRLF will be replaced by LF in File1.txt.
+The file will have its original line endings in your working directory
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git commit -am "WID3:trying restore or check"
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --oneline
+e92ff83 (HEAD -> master, tag: V1.0) WID2:trying restore or check
+b3d25b4 Cong: implemented the .gitignore on the .rtf files
+e832341 WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+e91d3be WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Filetobeedited.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git add .
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git commit -m "WID5:file to be deleted implmented"
+[master d1fb12e] WID5:file to be deleted implmented
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Filetobeedited.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    Filetobeedited.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git rm Filetobeedited.txt
+rm 'Filetobeedited.txt'
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git commit -m "i deleted because of so and so"
+[master 117eb8a] i deleted because of so and so
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 Filetobeedited.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --oneline
+117eb8a (HEAD -> master) i deleted because of so and so
+d1fb12e WID5:file to be deleted implmented
+e92ff83 (tag: V1.0) WID2:trying restore or check
+b3d25b4 Cong: implemented the .gitignore on the .rtf files
+e832341 WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+e91d3be WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git revert 117eb8a
+[master a453ed7] Revert "i want to revert"
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Filetobeedited.txt
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --oneline
+a453ed7 (HEAD -> master) Revert "i want to revert"
+117eb8a i deleted because of so and so
+d1fb12e WID5:file to be deleted implmented
+e92ff83 (tag: V1.0) WID2:trying restore or check
+b3d25b4 Cong: implemented the .gitignore on the .rtf files
+e832341 WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+e91d3be WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git reset --help
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git reset --hard 117eb8a
+HEAD is now at 117eb8a i deleted because of so and so
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --oneline
+117eb8a (HEAD -> master) i deleted because of so and so
+d1fb12e WID5:file to be deleted implmented
+e92ff83 (tag: V1.0) WID2:trying restore or check
+b3d25b4 Cong: implemented the .gitignore on the .rtf files
+e832341 WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+e91d3be WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git reset --hard Head~2
+HEAD is now at e92ff83 WID2:trying restore or check
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$ git log --oneline
+e92ff83 (HEAD -> master, tag: V1.0) WID2:trying restore or check
+b3d25b4 Cong: implemented the .gitignore on the .rtf files
+e832341 WID:MADE MORE CHANGES TO FILE1 AND SINCE I WANTED TO PASS A BIG MESSAGE SO I USED THIS
+1b5ff75 WID:modified File1 on login status
+e91d3be WID: File1 created with Hello world Logic
+
+Venky@KUKI MINGW64 /c/PERSISTENT/Git_Working_Folder (master)
+$
+
