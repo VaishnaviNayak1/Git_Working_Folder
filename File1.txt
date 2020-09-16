@@ -10,3 +10,4 @@
 4) Changes for bug2
 
 5) Change CR1:Change by Team-Mate to test Rebase
+6) Change 8: trying stash
